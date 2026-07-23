@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+.tropes-container {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  background-color: #121212;
+  padding: 25px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: #c2c2c2;
+  border: 1px solid #282828;
+}
+
+/* --- HEADER --- */
+.tropes-header {
+  display: flex;
+  background-color: #522325;
+  border: 1px solid #6e2f32;
+  margin-bottom: 25px;
+  min-height: 140px;
+  overflow: hidden;
+}
+
+.tropes-header-left {
+  flex: 1;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.tropes-quote-icon {
+  font-size: 55px;
+  line-height: 1;
+  font-weight: 800;
+  color: #e2deda;
+  font-family: serif;
+}
+
+.tropes-header-text h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #e2deda;
+  line-height: 1;
+}
+
+.tropes-header-text p {
+  margin: 6px 0 0 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #c9a4a5;
+  line-height: 1.4;
+}
+
+.tropes-header-right {
+  width: 40%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  filter: contrast(1.1) brightness(0.8);
+}
+
+.tropes-header-right::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to right, #522325, transparent);
+}
+
+/* --- GRID DE CARDS --- */
+.tropes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.tropes-card {
+  background-color: #1c1a1a;
+  border: 1px solid #3c2425;
+  border-radius: 6px;
+  padding: 25px 20px 20px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.tropes-icon-circle {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #83393c;
+  border-radius: 50%;
+  margin: 0 auto 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2b1819;
+  color: #e2deda;
+  font-size: 20px;
+}
+
+.tropes-card h2 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #a75053;
+  margin: 0 0 12px 0;
+}
+
+.tropes-divider {
+  border: 0;
+  height: 1px;
+  background: #6e2f32;
+  margin: 0 0 15px 0;
+  opacity: 0.6;
+}
+
+.tropes-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.tropes-card li {
+  font-size: 12px;
+  padding: 4px 0 4px 18px;
+  position: relative;
+  color: #b5b0aa;
+  line-height: 1.3;
+}
+
+.tropes-card li::before {
+  content: '°';
+  position: absolute;
+  left: 2px;
+  top: 3px;
+  color: #a75053;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* --- FOOTER QUOTE --- */
+.tropes-footer {
+  background-color: #171515;
+  border: 1px solid #3c2425;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.tropes-footer-icon {
+  font-size: 40px;
+  line-height: 1;
+  color: #83393c;
+  font-family: serif;
+}
+
+.tropes-footer-text {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #a39e99;
+  text-align: center;
+  flex: 1;
+  line-height: 1.6;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .tropes-grid {
+    grid-template-columns: 1fr;
+  }
+  .tropes-header {
+    flex-direction: column;
+  }
+  .tropes-header-right {
+    width: 100%;
+    height: 150px;
+  }
+}
