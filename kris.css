@@ -1,0 +1,62 @@
+/* KRISTIAN ASDAHL · TROPES */
+/* Combined CSS generated from Parts 1A–1D */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+ --kr-main:#7d3033;
+ --kr-main-dark:#5e2325;
+ --kr-main-light:#a1474b;
+ --kr-bg:#171717;
+ --kr-box:#202020;
+ --kr-box2:#252525;
+ --kr-text:#ececec;
+ --kr-soft:#bcbcbc;
+ --kr-border:rgba(255,255,255,.06);
+ --kr-shadow:0 12px 30px rgba(0,0,0,.20);
+}
+
+.kris{width:min(100%,900px);margin:35px auto;font-family:'Poppins',sans-serif;color:var(--kr-text);}
+.kris *{margin:0;padding:0;box-sizing:border-box;scrollbar-width:thin;scrollbar-color:var(--kr-main) transparent;}
+.kris a{text-decoration:none;color:inherit;transition:.25s ease;}
+.kris ul{list-style:none;}
+.kris img{display:block;max-width:100%;}
+.kris-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:24px;}
+.kris-title{font-family:'Anton',sans-serif;font-size:52px;letter-spacing:2px;text-transform:uppercase;color:#fff;}
+.kris-subtitle{margin-top:18px;font-size:12px;line-height:190%;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.82);}
+.kris p,.kris li{line-height:180%;}
+.kris-head{display:grid;grid-template-columns:280px 1fr;min-height:320px;overflow:hidden;border-radius:14px;background:linear-gradient(135deg,var(--kr-main),var(--kr-main-dark));box-shadow:var(--kr-shadow);}
+.kris-photo{position:relative;overflow:hidden;background:#1c1c1c;}
+.kris-photo img{width:100%;height:100%;object-fit:cover;}
+.kris-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.12),rgba(0,0,0,.28));}
+.kris-info{display:flex;flex-direction:column;justify-content:center;padding:42px 48px;}
+.kris-divider{width:90px;height:3px;background:rgba(255,255,255,.45);border-radius:30px;margin:24px 0;}
+.kris-quote{max-width:520px;font-size:14px;line-height:190%;color:rgba(255,255,255,.90);font-style:italic;}
+.kris-card{display:flex;flex-direction:column;min-height:290px;background:var(--kr-box);border:1px solid var(--kr-border);border-radius:12px;overflow:hidden;box-shadow:var(--kr-shadow);transition:.3s;}
+.kris-card:hover{transform:translateY(-4px);}
+.kris-card-header{display:flex;align-items:center;gap:12px;padding:18px 22px;background:var(--kr-main);}
+.kris-card-icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);color:#fff;font-size:18px;flex-shrink:0;}
+.kris-card-title{font-family:'Anton',sans-serif;font-size:24px;letter-spacing:1px;text-transform:uppercase;color:#fff;}
+.kris-card-body{flex:1;padding:22px;overflow-y:auto;}
+.kris-card-body ul{display:flex;flex-direction:column;gap:10px;}
+.kris-card-body li{position:relative;padding-left:18px;color:var(--kr-soft);font-size:13px;transition:.25s;}
+.kris-card-body li:before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--kr-main-light);}
+.kris-card-body li:hover{color:var(--kr-text);transform:translateX(4px);}
+.kris-footer{margin-top:24px;padding:26px 34px;background:var(--kr-box);border:1px solid var(--kr-border);border-radius:12px;box-shadow:var(--kr-shadow);}
+.kris-footer:before{content:"";display:block;width:70px;height:2px;background:var(--kr-main);margin-bottom:18px;border-radius:20px;}
+.kris-footer p{color:var(--kr-soft);font-size:13px;line-height:190%;text-transform:uppercase;letter-spacing:1.5px;}
+@media(max-width:780px){
+ .kris{width:100%;margin:25px auto;}
+ .kris-grid{grid-template-columns:1fr;gap:18px;}
+ .kris-head{grid-template-columns:1fr;}
+ .kris-photo{height:300px;}
+ .kris-info{padding:36px;}
+ .kris-card{min-height:250px;}
+}
+@media(max-width:520px){
+ .kris-title{font-size:40px;}
+ .kris-subtitle{font-size:11px;letter-spacing:1px;}
+ .kris-quote{font-size:13px;}
+ .kris-card-title{font-size:20px;}
+ .kris-card-icon{width:36px;height:36px;font-size:16px;}
+}
